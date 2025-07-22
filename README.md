@@ -1,12 +1,51 @@
-# React + Vite
+# QuickTalk React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project uses [Vite](https://vitejs.dev) with React and Tailwind CSS. Follow these steps to set up your environment, run the development server and deploy the app.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repository and install dependencies:
+   ```bash
+   git clone <repo-url>
+   cd runclub
+   npm install
+   ```
+2. Configure environment variables by creating a `.env` file in the project root. Any variable prefixed with `VITE_` will be exposed to the client. Example:
+   ```bash
+   VITE_API_URL=https://api.example.com
+   VITE_APP_TITLE=QuickTalk
+   ```
 
-## Expanding the ESLint configuration
+## Running the Dev Server
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Start the local development server with:
+```bash
+npm run dev
+```
+This opens the app at `http://localhost:5173/` with hot reloading.
+
+## Linting
+
+To lint the codebase run:
+```bash
+npm run lint
+```
+
+## Building for Production
+
+Create an optimized build with:
+```bash
+npm run build
+```
+The output is placed in the `dist` directory.
+
+## Previewing the Build
+
+You can preview the production build locally using:
+```bash
+npm run preview
+```
+
+## Deploy
+
+Upload the contents of the `dist` folder to your preferred static hosting service (such as Netlify, Vercel or GitHub Pages). Ensure any required environment variables are configured in your hosting provider.
